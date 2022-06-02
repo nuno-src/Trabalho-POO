@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Trabalho_POO
+namespace Talho
 {
-    public partial class Form1 : Form
+    public partial class FormLogIn : Form
     {
-        public Form1()
+        public FormLogIn()
         {
             InitializeComponent();
         }
