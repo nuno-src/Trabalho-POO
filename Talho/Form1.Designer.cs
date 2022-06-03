@@ -97,6 +97,7 @@ namespace Talho
             this.buttonAdd.TabIndex = 4;
             this.buttonAdd.Text = "ADICIONAR";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // textBoxNome
             // 
@@ -152,6 +153,7 @@ namespace Talho
             this.button1.TabIndex = 11;
             this.button1.Text = "REMOVER";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
