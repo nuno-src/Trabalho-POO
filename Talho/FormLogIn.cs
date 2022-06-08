@@ -12,9 +12,55 @@ namespace Talho
 {
     public partial class FormLogIn : Form
     {
-        public FormLogIn()
+        Form1 fgestor;
+        FormCliente fcliente;
+        public FormLogIn(Form1 nform1)
         {
             InitializeComponent();
+            fgestor = nform1;
+        }
+        public FormLogIn(FormCliente nformcliente)
+        {
+            InitializeComponent();
+            fcliente = nformcliente;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(radioButtonGestor.Checked == true)
+            {
+                if(textBoxNome.Text == "gestor")
+                {
+                    this.Close();
+
+                    fgestor.Enabled = true;
+                    fgestor.Opacity = 100;
+                    fgestor.Activate();
+                }
+                else
+                {
+                    MessageBox.Show("Erro Login!");
+                }
+            }
+            else if(radioButtonCliente.Checked == true)
+            {
+                if (textBoxNome.Text == "cliente")
+                {
+                    this.Close();
+
+                    FormCliente fl = new FormCliente();
+                    
+                    fl.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Erro Login!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Necessario Selecionar Gestor / Cliente");
+            }
         }
     }
 }

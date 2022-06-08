@@ -29,36 +29,36 @@ namespace Talho
         /// </summary>
         private void InitializeComponent()
         {
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonGestor = new System.Windows.Forms.RadioButton();
+            this.radioButtonCliente = new System.Windows.Forms.RadioButton();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // radioButton1
+            // radioButtonGestor
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(51, 51);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(94, 29);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Gestor";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonGestor.AutoSize = true;
+            this.radioButtonGestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonGestor.Location = new System.Drawing.Point(51, 51);
+            this.radioButtonGestor.Name = "radioButtonGestor";
+            this.radioButtonGestor.Size = new System.Drawing.Size(94, 29);
+            this.radioButtonGestor.TabIndex = 0;
+            this.radioButtonGestor.TabStop = true;
+            this.radioButtonGestor.Text = "Gestor";
+            this.radioButtonGestor.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonCliente
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(180, 51);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(97, 29);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Cliente";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonCliente.AutoSize = true;
+            this.radioButtonCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCliente.Location = new System.Drawing.Point(180, 51);
+            this.radioButtonCliente.Name = "radioButtonCliente";
+            this.radioButtonCliente.Size = new System.Drawing.Size(97, 29);
+            this.radioButtonCliente.TabIndex = 1;
+            this.radioButtonCliente.TabStop = true;
+            this.radioButtonCliente.Text = "Cliente";
+            this.radioButtonCliente.UseVisualStyleBackColor = true;
             // 
             // textBoxNome
             // 
@@ -87,6 +87,7 @@ namespace Talho
             this.button1.TabIndex = 4;
             this.button1.Text = "ENTRAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormLogIn
             // 
@@ -96,8 +97,8 @@ namespace Talho
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxNome);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButtonCliente);
+            this.Controls.Add(this.radioButtonGestor);
             this.Name = "FormLogIn";
             this.Text = "FormLogIn";
             this.ResumeLayout(false);
@@ -107,8 +108,8 @@ namespace Talho
 
         #endregion
 
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButtonGestor;
+        private System.Windows.Forms.RadioButton radioButtonCliente;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
