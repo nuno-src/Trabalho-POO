@@ -200,14 +200,14 @@ namespace Talho
             // guardarToolStripMenuItem1
             // 
             this.guardarToolStripMenuItem1.Name = "guardarToolStripMenuItem1";
-            this.guardarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.guardarToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.guardarToolStripMenuItem1.Text = "Guardar";
             this.guardarToolStripMenuItem1.Click += new System.EventHandler(this.guardarToolStripMenuItem1_Click);
             // 
             // fecharToolStripMenuItem
             // 
             this.fecharToolStripMenuItem.Name = "fecharToolStripMenuItem";
-            this.fecharToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fecharToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.fecharToolStripMenuItem.Text = "Fechar";
             this.fecharToolStripMenuItem.Click += new System.EventHandler(this.fecharToolStripMenuItem_Click);
             // 
@@ -255,7 +255,6 @@ namespace Talho
         private System.Windows.Forms.NumericUpDown numericUpDownQuant;
         private System.Windows.Forms.TextBox textBoxPreco;
         private System.Windows.Forms.TextBox textBoxDescr;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonRemover;
         private System.Windows.Forms.Label label6;
@@ -264,6 +263,7 @@ namespace Talho
         private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem fecharToolStripMenuItem;
+        public System.Windows.Forms.ListBox listBox1;
     }
 }
 
