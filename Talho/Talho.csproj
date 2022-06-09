@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -65,6 +66,7 @@
     <Compile Include="FormLogIn.Designer.cs">
       <DependentUpon>FormLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gestor.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Produto.cs" />
     <Compile Include="Program.cs" />
