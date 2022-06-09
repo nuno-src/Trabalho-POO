@@ -56,7 +56,7 @@ namespace Talho
                 chave.Close();
             }
 
-            //NÃO APAGAR CODIGO A BAIXO, CODIGO PARA LOGIN, SE TIRAR FICA A FUNCIONAR
+            //NÃO APAGAR CODIGO A BAIXO, CODIGO PARA LOGIN, SE DESCOMNETAR FICA A FUNCIONAR
             
             this.Enabled = false;
             this.Opacity = 0;

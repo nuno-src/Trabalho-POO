@@ -1,4 +1,9 @@
+.vs/
 *.exe
 *.pdb
 *.cache
+*.suo
+*.csproj.GenerateResource.cache
+.suo
 .suo/
+.vs\Talho\v17\.suo/

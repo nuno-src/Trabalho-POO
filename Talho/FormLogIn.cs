@@ -62,5 +62,15 @@ namespace Talho
                 MessageBox.Show("Necessario Selecionar Gestor / Cliente");
             }
         }
+
+        //private void FormLogIn_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    Environment.Exit(1);
+        //}
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+        }
     }
 }
