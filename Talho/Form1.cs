@@ -57,14 +57,14 @@ namespace Talho
             }
 
             //NÃO APAGAR CODIGO A BAIXO, CODIGO PARA LOGIN, SE TIRAR FICA A FUNCIONAR
-            /*
+            
             this.Enabled = false;
             this.Opacity = 0;
             this.Hide();
 
             FormLogIn fl = new FormLogIn(this);
             fl.Show();
-            */
+            
             
         }
 

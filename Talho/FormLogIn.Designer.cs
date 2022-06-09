@@ -67,6 +67,7 @@ namespace Talho
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(154, 31);
             this.textBoxNome.TabIndex = 2;
+            this.textBoxNome.UseSystemPasswordChar = true;
             // 
             // label1
             // 
