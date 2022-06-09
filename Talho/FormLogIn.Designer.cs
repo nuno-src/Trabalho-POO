@@ -102,6 +102,7 @@ namespace Talho
             this.Controls.Add(this.radioButtonGestor);
             this.Name = "FormLogIn";
             this.Text = "FormLogIn";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogIn_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
