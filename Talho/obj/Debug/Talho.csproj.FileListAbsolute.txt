@@ -35,3 +35,17 @@ C:\Users\João Marques\Desktop\2º Semestre\Programação Orientada a Objetos\PR
 C:\Users\João Marques\Desktop\2º Semestre\Programação Orientada a Objetos\PROJETO\Talho\obj\Debug\Talho.csproj.CoreCompileInputs.cache
 C:\Users\João Marques\Desktop\2º Semestre\Programação Orientada a Objetos\PROJETO\Talho\obj\Debug\Talho.exe
 C:\Users\João Marques\Desktop\2º Semestre\Programação Orientada a Objetos\PROJETO\Talho\obj\Debug\Talho.pdb
+C:\Users\ruimr\Documents\ISMAI\Licenciatura\2º Semestre\Progamação Objetos\Projeto 2\Trabalho-POO\Trabalho-POO\Trabalho-POO\Talho\bin\Debug\Talho.exe.config
+C:\Users\ruimr\Documents\ISMAI\Licenciatura\2º Semestre\Progamação Objetos\Projeto 2\Trabalho-POO\Trabalho-POO\Trabalho-POO\Talho\bin\Debug\Talho.exe
+C:\Users\ruimr\Documents\ISMAI\Licenciatura\2º Semestre\Progamação Objetos\Projeto 2\Trabalho-POO\Trabalho-POO\Trabalho-POO\Talho\bin\Debug\Talho.pdb
+C:\Users\ruimr\Documents\ISMAI\Licenciatura\2º Semestre\Progamação Objetos\Projeto 2\Trabalho-POO\Trabalho-POO\Trabalho-POO\Talho\obj\Debug\Talho.csproj.AssemblyReference.cache
+C:\Users\ruimr\Documents\ISMAI\Licenciatura\2º Semestre\Progamação Objetos\Projeto 2\Trabalho-POO\Trabalho-POO\Trabalho-POO\Talho\obj\Debug\Talho.csproj.SuggestedBindingRedirects.cache
+C:\Users\ruimr\Documents\ISMAI\Licenciatura\2º Semestre\Progamação Objetos\Projeto 2\Trabalho-POO\Trabalho-POO\Trabalho-POO\Talho\obj\Debug\Talho.Form1.resources
+C:\Users\ruimr\Documents\ISMAI\Licenciatura\2º Semestre\Progamação Objetos\Projeto 2\Trabalho-POO\Trabalho-POO\Trabalho-POO\Talho\obj\Debug\Talho.FormCliente.resources
+C:\Users\ruimr\Documents\ISMAI\Licenciatura\2º Semestre\Progamação Objetos\Projeto 2\Trabalho-POO\Trabalho-POO\Trabalho-POO\Talho\obj\Debug\Talho.FormLogIn.resources
+C:\Users\ruimr\Documents\ISMAI\Licenciatura\2º Semestre\Progamação Objetos\Projeto 2\Trabalho-POO\Trabalho-POO\Trabalho-POO\Talho\obj\Debug\Talho.Properties.Resources.resources
+C:\Users\ruimr\Documents\ISMAI\Licenciatura\2º Semestre\Progamação Objetos\Projeto 2\Trabalho-POO\Trabalho-POO\Trabalho-POO\Talho\obj\Debug\Talho.csproj.GenerateResource.cache
+C:\Users\ruimr\Documents\ISMAI\Licenciatura\2º Semestre\Progamação Objetos\Projeto 2\Trabalho-POO\Trabalho-POO\Trabalho-POO\Talho\obj\Debug\Talho.csproj.CoreCompileInputs.cache
+C:\Users\ruimr\Documents\ISMAI\Licenciatura\2º Semestre\Progamação Objetos\Projeto 2\Trabalho-POO\Trabalho-POO\Trabalho-POO\Talho\obj\Debug\Talho.exe
+C:\Users\ruimr\Documents\ISMAI\Licenciatura\2º Semestre\Progamação Objetos\Projeto 2\Trabalho-POO\Trabalho-POO\Trabalho-POO\Talho\obj\Debug\Talho.pdb
+C:\Users\ruimr\Documents\ISMAI\Licenciatura\2º Semestre\Progamação Objetos\Projeto 2\Trabalho-POO\Trabalho-POO\Trabalho-POO\Talho\obj\Debug\Talho.FormDetalhes.resources
