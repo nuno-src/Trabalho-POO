@@ -125,5 +125,14 @@ namespace Talho
             this.Close();
         }
 
+        private void listBox1_DoubleClick(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                FormDetalhes fVer = new FormDetalhes(this);
+                fVer.Show();
+            }
+        }
+
     }
 }
