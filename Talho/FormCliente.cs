@@ -20,7 +20,8 @@ namespace Talho
         public FormCliente()
         {
             InitializeComponent();
-
+            listBox1.AllowDrop = true;
+            listBox2.AllowDrop = true;
             //fg = fp;
         }
 
@@ -75,6 +76,63 @@ namespace Talho
         private void FormCliente_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(1);
+        }
+
+        private void listBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                listBox2.DoDragDrop(listBox1.SelectedItem.ToString(), DragDropEffects.Copy);
+            }
+            else
+            {
+
+            }
+            
+        }
+
+        private void listBox2_DragEnter(object sender, DragEventArgs e)
+        {
+            if(e.Data.GetDataPresent(DataFormats.Text))
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
+
+        private void listBox2_DragDrop(object sender, DragEventArgs e)
+        {
+            listBox2.Items.Add(listBox1.SelectedItem);
+            listBox1.Items.Remove(listBox1.SelectedItem);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                listBox2.Items.Add(listBox1.SelectedItem);
+                listBox1.Items.Remove(listBox1.SelectedItem);
+            }
+            else
+            {
+                MessageBox.Show("Selecione O Produto Para Adicionar!");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (listBox2.SelectedItem != null)
+            {
+                listBox1.Items.Add(listBox2.SelectedItem);
+                listBox2.Items.Remove(listBox2.SelectedItem);
+            }
+            else
+            {
+                MessageBox.Show("Selecione O Produto Para Remover!");
+            }
         }
     }
 }

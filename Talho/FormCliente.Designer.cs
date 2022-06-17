@@ -145,6 +145,7 @@ namespace Talho
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 225);
             this.listBox1.TabIndex = 9;
+            this.listBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseDown);
             // 
             // button1
             // 
@@ -154,6 +155,7 @@ namespace Talho
             this.button1.TabIndex = 10;
             this.button1.Text = ">";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -172,6 +174,8 @@ namespace Talho
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(120, 225);
             this.listBox2.TabIndex = 12;
+            this.listBox2.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBox2_DragDrop);
+            this.listBox2.DragEnter += new System.Windows.Forms.DragEventHandler(this.listBox2_DragEnter);
             // 
             // button2
             // 
@@ -181,6 +185,7 @@ namespace Talho
             this.button2.TabIndex = 13;
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label6
             // 

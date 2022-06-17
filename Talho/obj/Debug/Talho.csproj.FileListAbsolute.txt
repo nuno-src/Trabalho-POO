@@ -49,3 +49,4 @@ C:\Users\ruimr\Documents\ISMAI\Licenciatura\2º Semestre\Progamação Objetos\Pr
 C:\Users\ruimr\Documents\ISMAI\Licenciatura\2º Semestre\Progamação Objetos\Projeto 2\Trabalho-POO\Trabalho-POO\Trabalho-POO\Talho\obj\Debug\Talho.exe
 C:\Users\ruimr\Documents\ISMAI\Licenciatura\2º Semestre\Progamação Objetos\Projeto 2\Trabalho-POO\Trabalho-POO\Trabalho-POO\Talho\obj\Debug\Talho.pdb
 C:\Users\ruimr\Documents\ISMAI\Licenciatura\2º Semestre\Progamação Objetos\Projeto 2\Trabalho-POO\Trabalho-POO\Trabalho-POO\Talho\obj\Debug\Talho.FormDetalhes.resources
+C:\Users\João Marques\Desktop\2º Semestre\Programação Orientada a Objetos\PROJETO\Talho\obj\Debug\Talho.FormDetalhes.resources

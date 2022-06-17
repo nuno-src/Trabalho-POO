@@ -72,5 +72,13 @@ namespace Talho
         {
             Environment.Exit(1);
         }
+
+        private void textBoxNome_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click(this, new EventArgs());
+            }
+        }
     }
 }
