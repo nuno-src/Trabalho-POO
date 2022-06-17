@@ -28,6 +28,12 @@ namespace Talho
             {
                 pTemp = fPrincipal.listBox1.SelectedItem as Produto;
             }
+            
+            if (pTemp.GetNome() == "Presunto")
+            {
+                pictureBox1.ImageLocation = "https://cdn.tasteatlas.com/Images/Ingredients/1255a88ff4bc4adaaa0dfeb0ad864f9b.jpg?w=600&h=450";
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
            
 
             labelNome.Text = pTemp.GetNome();
@@ -37,6 +43,16 @@ namespace Talho
             labelValidade.Text = pTemp.GetValidade().ToString();
 
             progressBar1.Value = pTemp.GetQuantidade();
+        }
+
+        private void buttonFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
