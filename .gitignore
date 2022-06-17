@@ -9,12 +9,14 @@
 *.csproj.CoreCompileInputs.cache
 .suo
 .suo/
-.vs\Talho\v17\.suo/
 
 
-*.cache
+
+
 *.cache
 Talho/obj/Debug/Talho.csproj.GenerateResource.cache
 Talho/bin/Debug/Talho.pdb
 Talho/obj/Debug/Talho.csproj.AssemblyReference.cache
-Talho/obj/Debug/Talho.csproj.GenerateResource.cache
+
+.vs/Talho/v17/.suo
+
