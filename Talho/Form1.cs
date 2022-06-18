@@ -21,6 +21,8 @@ namespace Talho
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            buttonEditar.Enabled = false;
+
             if (File.Exists("dadosproduto.txt"))
             {
                 FileStream fich = File.OpenRead("dadosproduto.txt");
@@ -125,6 +127,59 @@ namespace Talho
             this.Close();
         }
 
+        
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+
+
+                Produto pTemp = listBox1.SelectedItem as Produto;
+
+                Data dataTemp = new Data(dateTimePicker1.Value.Day,
+                dateTimePicker1.Value.Month, dateTimePicker1.Value.Year);
+
+
+                pTemp.SetNome(textBoxNome.Text);
+                pTemp.SetQuantidade(int.Parse(numericUpDownQuant.Text));
+                pTemp.SetPreco(double.Parse(textBoxPreco.Text));
+                pTemp.SetValidade(dataTemp);
+                pTemp.SetDescricao(textBoxDescr.Text);
+
+
+                //if(textBoxNome.Text != string.Empty)
+                //{
+                //    pTemp.SetNome(textBoxNome.Text);
+                //}
+
+                //if (numericUpDownQuant.Text != null)
+                //{
+                //    pTemp.SetQuantidade(int.Parse(numericUpDownQuant.Text));
+                //}
+
+                //if (textBoxPreco.Text != string.Empty)
+                //{
+                //    pTemp.SetPreco(double.Parse(textBoxPreco.Text));
+                //}
+
+                //if (dateTimePicker1 != null)
+                //{
+                //    pTemp.SetValidade(dataTemp);
+                //}
+
+                //if (textBoxDescr.Text != string.Empty)
+                //{
+                //    pTemp.SetDescricao(textBoxDescr.Text);
+                //}
+
+
+                //listBox1.Refresh();
+
+                //listBox1.Items.Insert(listBox1.SelectedIndex, pTemp);
+            }
+        }
+
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
             if (listBox1.SelectedItem != null)
@@ -134,5 +189,22 @@ namespace Talho
             }
         }
 
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            buttonEditar.Enabled = true;
+
+            Produto pTemp = listBox1.SelectedItem as Produto;
+
+            //Data dataTemp = new Data(dateTimePicker1.Value.Day,
+            //dateTimePicker1.Value.Month, dateTimePicker1.Value.Year);
+
+            textBoxNome.Text = pTemp.GetNome();
+            numericUpDownQuant.Text = pTemp.GetQuantidade().ToString(); ;
+            textBoxPreco.Text = pTemp.GetPreco().ToString();
+            //dateTimePicker1.Value.Day = pTemp.GetValidade().GetDia();
+            //dateTimePicker1. = pTemp.GetValidade().GetMes();
+            //dateTimePicker1.Value.Year = pTemp.GetValidade().GetAno();
+            textBoxDescr.Text = pTemp.GetDescricao();
+        }
     }
 }
