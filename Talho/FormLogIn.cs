@@ -81,5 +81,29 @@ namespace Talho
                 button1_Click(this, new EventArgs());
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormLogIn_Load(object sender, EventArgs e)
+        {
+            this.Icon = Properties.Resources.Icon;
+            pictureBox1.ImageLocation = "https://png.pngtree.com/png-vector/20190919/ourmid/pngtree-user-login-or-authenticate-icon-on-gray-background-flat-icon-ve-png-image_1742031.jpg";
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBoxNome.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBoxNome.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

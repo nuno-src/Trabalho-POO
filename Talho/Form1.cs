@@ -21,6 +21,7 @@ namespace Talho
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.Icon = Properties.Resources.Icon;
             buttonEditar.Enabled = false;
 
             if (File.Exists("dadosproduto.txt"))
@@ -210,6 +211,122 @@ namespace Talho
 
 
             
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maisCaroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Produto minpreco = listBox1.Items[0] as Produto;
+            Produto maxpreco = listBox1.Items[0] as Produto;
+
+            foreach (Produto x in listBox1.Items)
+            {
+                if (x.GetPreco() < minpreco.GetPreco())
+                {
+                    minpreco = x;
+                }
+                else if (x.GetPreco() == minpreco.GetPreco())
+                {
+                    if (x.GetPreco() < minpreco.GetPreco())
+                    {
+                        minpreco = x;
+                    }
+                    else if (x.GetPreco() == minpreco.GetPreco())
+                    {
+                        if (x.GetPreco() < minpreco.GetPreco())
+                        {
+                            minpreco = x;
+                        }
+                    }
+                }
+            }
+
+            foreach (Produto x in listBox1.Items)
+            {
+                if (x.GetPreco() > maxpreco.GetPreco())
+                {
+                    maxpreco = x;
+                }
+            }
+            MessageBox.Show(minpreco.GetNome() + " | " + minpreco.GetQuantidade() + " | " +
+            minpreco.GetPreco(), "Produto Preço MIN");
+
+            MessageBox.Show(maxpreco.GetNome() + " | " + maxpreco.GetQuantidade() + " | " +
+            minpreco.GetPreco(), "Produto Preço MAX");
+        }
+
+        private void maisBaratoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Produto minVal = listBox1.Items[0] as Produto;
+
+            foreach (Produto x in listBox1.Items)
+            {
+                if (x.GetValidade().GetAno() < minVal.GetValidade().GetAno())
+                {
+                    minVal = x;
+                }
+                else if (x.GetValidade().GetAno() == minVal.GetValidade().GetAno())
+                {
+                    if (x.GetValidade().GetMes() < minVal.GetValidade().GetMes())
+                    {
+                        minVal = x;
+                    }
+                    else if (x.GetValidade().GetMes() == minVal.GetValidade().GetMes())
+                    {
+                        if (x.GetValidade().GetDia() < minVal.GetValidade().GetDia())
+                        {
+                            minVal = x;
+                        }
+                    }
+                }
+            }
+
+            MessageBox.Show(minVal.GetNome() + " | " + minVal.GetQuantidade() + " | " +
+            minVal.GetPreco(), "Produto Validade Menor");
+        }
+
+        private void foraDeValidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Data dataHoje = new Data(DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year);
+
+
+            Produto foraVal = listBox1.Items[0] as Produto;
+            foreach (Produto x in listBox1.Items)
+            {
+                if (x.GetValidade() < dataHoje)
+                {
+                    foraVal = x;
+                    MessageBox.Show(foraVal.GetNome() + " | " + foraVal.GetQuantidade() + " | " +
+            foraVal.GetPreco(), "Produto fora da validade");
+                }
+            }
+               
+            
+
         }
     }
 }

@@ -22,6 +22,7 @@ namespace Talho
 
         private void FormDetalhes_Load(object sender, EventArgs e)
         {
+            this.Icon = Properties.Resources.Icon;
             Produto pTemp = new Produto();
 
             if (fPrincipal != null)
@@ -51,6 +52,26 @@ namespace Talho
         }
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelPreco_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDescricao_Click(object sender, EventArgs e)
         {
 
         }
