@@ -57,7 +57,7 @@ namespace Talho
             this.label1.Size = new System.Drawing.Size(56, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+
             // 
             // label2
             // 
@@ -68,7 +68,7 @@ namespace Talho
             this.label2.Size = new System.Drawing.Size(123, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nº Contribuinte:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+
             // 
             // label3
             // 
@@ -79,7 +79,7 @@ namespace Talho
             this.label3.Size = new System.Drawing.Size(171, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "Método de Pagamento:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+
             // 
             // radioButton1
             // 
@@ -92,7 +92,7 @@ namespace Talho
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Dinheiro";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+
             // 
             // radioButton2
             // 
@@ -105,7 +105,7 @@ namespace Talho
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Multibanco";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+
             // 
             // radioButton3
             // 
@@ -118,7 +118,7 @@ namespace Talho
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "MB Way";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+
             // 
             // textBoxNome
             // 
@@ -126,7 +126,7 @@ namespace Talho
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(108, 20);
             this.textBoxNome.TabIndex = 6;
-            this.textBoxNome.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
+
             // 
             // textBoxContri
             // 
@@ -144,7 +144,7 @@ namespace Talho
             this.label4.Size = new System.Drawing.Size(76, 21);
             this.label4.TabIndex = 8;
             this.label4.Text = "Produtos:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+
             // 
             // listBox1
             // 
@@ -155,7 +155,7 @@ namespace Talho
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 214);
             this.listBox1.TabIndex = 9;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+
             this.listBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseDown);
             // 
             // button1
@@ -177,7 +177,7 @@ namespace Talho
             this.label5.Size = new System.Drawing.Size(74, 21);
             this.label5.TabIndex = 11;
             this.label5.Text = "Carrinho:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+
             // 
             // listBox2
             // 
@@ -188,7 +188,7 @@ namespace Talho
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(120, 214);
             this.listBox2.TabIndex = 12;
-            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
+
             this.listBox2.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBox2_DragDrop);
             this.listBox2.DragEnter += new System.Windows.Forms.DragEventHandler(this.listBox2_DragEnter);
             // 
@@ -211,7 +211,7 @@ namespace Talho
             this.label6.Size = new System.Drawing.Size(59, 21);
             this.label6.TabIndex = 14;
             this.label6.Text = "TOTAL:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+
             // 
             // labelTOTAL
             // 
@@ -222,7 +222,7 @@ namespace Talho
             this.labelTOTAL.Size = new System.Drawing.Size(85, 15);
             this.labelTOTAL.TabIndex = 15;
             this.labelTOTAL.Text = "label7(eliminar)";
-            this.labelTOTAL.Click += new System.EventHandler(this.labelTOTAL_Click);
+
             // 
             // button3
             // 
