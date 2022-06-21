@@ -145,6 +145,7 @@ namespace Talho
                 pTemp.SetNome(textBoxNome.Text);
                 pTemp.SetQuantidade(int.Parse(numericUpDownQuant.Text));
                 pTemp.SetPreco(double.Parse(textBoxPreco.Text));
+                pTemp.SetImagem(textBoxPathImg.Text);
                 pTemp.SetValidade(dataTemp);
                 pTemp.SetDescricao(textBoxDescr.Text);
 
@@ -296,7 +297,7 @@ namespace Talho
                 }
             }
 
-            MessageBox.Show(minVal.GetNome() + " | " + minVal.GetQuantidade() + " | " +
+            MessageBox.Show(minVal.GetNome() + " | Qt: " + minVal.GetQuantidade() + " | " +
             minVal.GetPreco() + "€", "Produto Validade Menor");
         }
 
@@ -311,7 +312,7 @@ namespace Talho
                 if (x.GetValidade() < dataHoje)
                 {
                     foraVal = x;
-                    MessageBox.Show(foraVal.GetNome() + " | " + foraVal.GetQuantidade() + " | " +
+                    MessageBox.Show(foraVal.GetNome() + " | Qt: " + foraVal.GetQuantidade() + " | " +
                     foraVal.GetPreco() + "€", "Produto fora da validade");
                 }
             }
