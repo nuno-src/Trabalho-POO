@@ -297,7 +297,7 @@ namespace Talho
             }
 
             MessageBox.Show(minVal.GetNome() + " | " + minVal.GetQuantidade() + " | " +
-            minVal.GetPreco(), "Produto Validade Menor");
+            minVal.GetPreco() + "€", "Produto Validade Menor");
         }
 
         private void foraDeValidadeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -312,7 +312,7 @@ namespace Talho
                 {
                     foraVal = x;
                     MessageBox.Show(foraVal.GetNome() + " | " + foraVal.GetQuantidade() + " | " +
-            foraVal.GetPreco(), "Produto fora da validade");
+                    foraVal.GetPreco() + "€", "Produto fora da validade");
                 }
             }
                
