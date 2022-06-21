@@ -12,6 +12,7 @@ namespace Talho
         private string nome;
         private int quantidade;
         private double preco;
+        private string imagem;
         private Data validade;
         private string descricao;
         //Construtor
@@ -20,15 +21,17 @@ namespace Talho
             nome = "";
             quantidade = 0;
             preco = 0;
+            imagem = "";
             descricao = "";
             validade = new Data();
 
         }
-        public Produto(string nNome, int nQuantidade, double nPreco, string nDescricao, Data nValidade)
+        public Produto(string nNome, int nQuantidade, double nPreco, string nImagem, string nDescricao, Data nValidade)
         {
             nome = nNome;
             quantidade = nQuantidade;
             preco = nPreco;
+            imagem = nImagem;
             descricao = nDescricao;
             validade = nValidade;
 
@@ -50,6 +53,15 @@ namespace Talho
         public void SetQuantidade(int nQuantidade)
         {
             quantidade = nQuantidade;
+        }
+
+        public string GetImagem()
+        {
+            return imagem;
+        }
+        public void SetImagem(string nImagem)
+        {
+            imagem = nImagem;
         }
         public string GetDescricao()
         {
@@ -78,7 +90,7 @@ namespace Talho
 
         public string EnviarFicheiro()
         {
-            return nome + "|" + quantidade + "|" + preco + "|" + descricao + "|" + validade;
+            return nome + "|" + quantidade + "|" + preco + "|" + imagem + "|" + descricao + "|" + validade;
         }
 
         public override string ToString()

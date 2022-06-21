@@ -44,11 +44,11 @@ namespace Talho
                 while (linha != null)
                 {
                     string[] auxP = linha.Split('|');
-                    string[] auxD = auxP[4].Split('/');
+                    string[] auxD = auxP[5].Split('/');
 
                     Data d = new Data(int.Parse(auxD[0]), int.Parse(auxD[1]), int.Parse(auxD[2]));
 
-                    Produto p = new Produto(auxP[0], int.Parse(auxP[1]), double.Parse(auxP[2]), auxP[3], d);
+                    Produto p = new Produto(auxP[0], int.Parse(auxP[1]), double.Parse(auxP[2]), auxP[3], auxP[4], d);
 
                     listBox1.Items.Add(p);
 
@@ -80,7 +80,7 @@ namespace Talho
                 dateTimePicker1.Value.Month, dateTimePicker1.Value.Year);
 
             Produto ptemp = new Produto(textBoxNome.Text, int.Parse(numericUpDownQuant.Value.ToString()),
-                 double.Parse(textBoxPreco.Text), textBoxDescr.Text, dataTemp);
+                 double.Parse(textBoxPreco.Text), textBoxPathImg.Text, textBoxDescr.Text, dataTemp);
 
             listBox1.Items.Add(ptemp);
         }
@@ -204,6 +204,7 @@ namespace Talho
             textBoxNome.Text = pTemp.GetNome();
             numericUpDownQuant.Text = pTemp.GetQuantidade().ToString(); ;
             textBoxPreco.Text = pTemp.GetPreco().ToString();
+            textBoxPathImg.Text = pTemp.GetImagem();
             //dateTimePicker1.Value.Day = pTemp.GetValidade().GetDia();
             //dateTimePicker1. = pTemp.GetValidade().GetMes();
             //dateTimePicker1.Value.Year = pTemp.GetValidade().GetAno();
@@ -213,30 +214,20 @@ namespace Talho
             
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void buttonBrowseImg_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                textBoxPathImg.Text = ofd.FileName;
+            }
+            File.Copy(ofd.FileName, ofd.SafeFileName);
+            textBoxPathImg.Text = ofd.SafeFileName;
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void maisCaroToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -272,11 +263,11 @@ namespace Talho
                     maxpreco = x;
                 }
             }
-            MessageBox.Show(minpreco.GetNome() + " | " + minpreco.GetQuantidade() + " | " +
-            minpreco.GetPreco(), "Produto Preço MIN");
+            MessageBox.Show(minpreco.GetNome() + " | Qt: " + minpreco.GetQuantidade() + " | " +
+            minpreco.GetPreco() + "€", "Produto Preço MIN");
 
-            MessageBox.Show(maxpreco.GetNome() + " | " + maxpreco.GetQuantidade() + " | " +
-            minpreco.GetPreco(), "Produto Preço MAX");
+            MessageBox.Show(maxpreco.GetNome() + " | Qt: " + maxpreco.GetQuantidade() + " | " +
+            minpreco.GetPreco() + "€", "Produto Preço MAX");
         }
 
         private void maisBaratoToolStripMenuItem_Click(object sender, EventArgs e)

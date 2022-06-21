@@ -47,11 +47,13 @@ namespace Talho
             this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guardarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.fecharToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonEditar = new System.Windows.Forms.Button();
             this.produtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.maisCaroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.maisBaratoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.foraDeValidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonEditar = new System.Windows.Forms.Button();
+            this.buttonBrowseImg = new System.Windows.Forms.Button();
+            this.textBoxPathImg = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuant)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +67,6 @@ namespace Talho
             this.label1.Size = new System.Drawing.Size(56, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -76,7 +77,6 @@ namespace Talho
             this.label2.Size = new System.Drawing.Size(94, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Quantidade:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -88,23 +88,21 @@ namespace Talho
             this.label3.Size = new System.Drawing.Size(84, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "Preço / Kg:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(32, 238);
+            this.label4.Location = new System.Drawing.Point(31, 329);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 21);
             this.label4.TabIndex = 3;
             this.label4.Text = "Descrição:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // buttonAdd
             // 
             this.buttonAdd.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.Location = new System.Drawing.Point(36, 366);
+            this.buttonAdd.Location = new System.Drawing.Point(35, 457);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(226, 40);
             this.buttonAdd.TabIndex = 4;
@@ -139,7 +137,7 @@ namespace Talho
             // textBoxDescr
             // 
             this.textBoxDescr.Font = new System.Drawing.Font("Segoe UI Emoji", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDescr.Location = new System.Drawing.Point(36, 272);
+            this.textBoxDescr.Location = new System.Drawing.Point(35, 363);
             this.textBoxDescr.Multiline = true;
             this.textBoxDescr.Name = "textBoxDescr";
             this.textBoxDescr.Size = new System.Drawing.Size(226, 60);
@@ -152,7 +150,7 @@ namespace Talho
             this.listBox1.ItemHeight = 26;
             this.listBox1.Location = new System.Drawing.Point(325, 90);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(239, 316);
+            this.listBox1.Size = new System.Drawing.Size(239, 394);
             this.listBox1.TabIndex = 9;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
@@ -169,7 +167,7 @@ namespace Talho
             // buttonRemover
             // 
             this.buttonRemover.Font = new System.Drawing.Font("Segoe UI Emoji", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRemover.Location = new System.Drawing.Point(570, 363);
+            this.buttonRemover.Location = new System.Drawing.Point(590, 444);
             this.buttonRemover.Name = "buttonRemover";
             this.buttonRemover.Size = new System.Drawing.Size(79, 40);
             this.buttonRemover.TabIndex = 11;
@@ -187,7 +185,6 @@ namespace Talho
             this.label6.Size = new System.Drawing.Size(73, 21);
             this.label6.TabIndex = 12;
             this.label6.Text = "Validade:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // dateTimePicker1
             // 
@@ -205,7 +202,7 @@ namespace Talho
             this.produtoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(681, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(902, 24);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -221,27 +218,16 @@ namespace Talho
             // guardarToolStripMenuItem1
             // 
             this.guardarToolStripMenuItem1.Name = "guardarToolStripMenuItem1";
-            this.guardarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.guardarToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.guardarToolStripMenuItem1.Text = "Guardar";
             this.guardarToolStripMenuItem1.Click += new System.EventHandler(this.guardarToolStripMenuItem1_Click);
             // 
             // fecharToolStripMenuItem
             // 
             this.fecharToolStripMenuItem.Name = "fecharToolStripMenuItem";
-            this.fecharToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fecharToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.fecharToolStripMenuItem.Text = "Fechar";
             this.fecharToolStripMenuItem.Click += new System.EventHandler(this.fecharToolStripMenuItem_Click);
-            // 
-            // buttonEditar
-            // 
-            this.buttonEditar.Font = new System.Drawing.Font("Segoe UI Emoji", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEditar.Location = new System.Drawing.Point(570, 303);
-            this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(79, 40);
-            this.buttonEditar.TabIndex = 15;
-            this.buttonEditar.Text = "EDITAR";
-            this.buttonEditar.UseVisualStyleBackColor = true;
-            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // produtoToolStripMenuItem
             // 
@@ -256,30 +242,60 @@ namespace Talho
             // maisCaroToolStripMenuItem
             // 
             this.maisCaroToolStripMenuItem.Name = "maisCaroToolStripMenuItem";
-            this.maisCaroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maisCaroToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.maisCaroToolStripMenuItem.Text = "Mais caro e barato";
             this.maisCaroToolStripMenuItem.Click += new System.EventHandler(this.maisCaroToolStripMenuItem_Click);
             // 
             // maisBaratoToolStripMenuItem
             // 
             this.maisBaratoToolStripMenuItem.Name = "maisBaratoToolStripMenuItem";
-            this.maisBaratoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maisBaratoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.maisBaratoToolStripMenuItem.Text = "Validade menor";
             this.maisBaratoToolStripMenuItem.Click += new System.EventHandler(this.maisBaratoToolStripMenuItem_Click);
             // 
             // foraDeValidadeToolStripMenuItem
             // 
             this.foraDeValidadeToolStripMenuItem.Name = "foraDeValidadeToolStripMenuItem";
-            this.foraDeValidadeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.foraDeValidadeToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.foraDeValidadeToolStripMenuItem.Text = "Fora de Validade";
             this.foraDeValidadeToolStripMenuItem.Click += new System.EventHandler(this.foraDeValidadeToolStripMenuItem_Click);
+            // 
+            // buttonEditar
+            // 
+            this.buttonEditar.Font = new System.Drawing.Font("Segoe UI Emoji", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditar.Location = new System.Drawing.Point(590, 384);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(79, 40);
+            this.buttonEditar.TabIndex = 15;
+            this.buttonEditar.Text = "EDITAR";
+            this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
+            // 
+            // buttonBrowseImg
+            // 
+            this.buttonBrowseImg.Location = new System.Drawing.Point(26, 256);
+            this.buttonBrowseImg.Name = "buttonBrowseImg";
+            this.buttonBrowseImg.Size = new System.Drawing.Size(100, 23);
+            this.buttonBrowseImg.TabIndex = 16;
+            this.buttonBrowseImg.Text = "Procurar Imagem";
+            this.buttonBrowseImg.UseVisualStyleBackColor = true;
+            this.buttonBrowseImg.Click += new System.EventHandler(this.buttonBrowseImg_Click);
+            // 
+            // textBoxPathImg
+            // 
+            this.textBoxPathImg.Location = new System.Drawing.Point(142, 258);
+            this.textBoxPathImg.Name = "textBoxPathImg";
+            this.textBoxPathImg.Size = new System.Drawing.Size(119, 20);
+            this.textBoxPathImg.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(681, 430);
+            this.ClientSize = new System.Drawing.Size(902, 514);
+            this.Controls.Add(this.textBoxPathImg);
+            this.Controls.Add(this.buttonBrowseImg);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
@@ -334,6 +350,8 @@ namespace Talho
         private System.Windows.Forms.ToolStripMenuItem maisCaroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem maisBaratoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem foraDeValidadeToolStripMenuItem;
+        private System.Windows.Forms.Button buttonBrowseImg;
+        private System.Windows.Forms.TextBox textBoxPathImg;
     }
 }
 

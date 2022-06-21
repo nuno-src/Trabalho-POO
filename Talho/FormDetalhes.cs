@@ -29,13 +29,10 @@ namespace Talho
             {
                 pTemp = fPrincipal.listBox1.SelectedItem as Produto;
             }
-            
-            if (pTemp.GetNome() == "Presunto")
-            {
-                pictureBox1.ImageLocation = "https://cdn.tasteatlas.com/Images/Ingredients/1255a88ff4bc4adaaa0dfeb0ad864f9b.jpg?w=600&h=450";
-                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
-           
+
+            pictureBox1.ImageLocation = pTemp.GetImagem();
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+
 
             labelNome.Text = pTemp.GetNome();
             labelQuantidade.Text = pTemp.GetQuantidade().ToString();

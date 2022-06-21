@@ -55,11 +55,11 @@ namespace Talho
                 while (linha != null)
                 {
                     string[] auxP = linha.Split('|');
-                    string[] auxD = auxP[4].Split('/');
+                    string[] auxD = auxP[5].Split('/');
 
                     Data d = new Data(int.Parse(auxD[0]), int.Parse(auxD[1]), int.Parse(auxD[2]));
 
-                    Produto p = new Produto(auxP[0], int.Parse(auxP[1]), double.Parse(auxP[2]), auxP[3], d);
+                    Produto p = new Produto(auxP[0], int.Parse(auxP[1]), double.Parse(auxP[2]), auxP[3], auxP[4], d);
 
                     listBox1.Items.Add(p);
 
