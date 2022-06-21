@@ -203,7 +203,7 @@ namespace Talho
             //dateTimePicker1.Value.Month, dateTimePicker1.Value.Year);
 
             textBoxNome.Text = pTemp.GetNome();
-            numericUpDownQuant.Text = pTemp.GetQuantidade().ToString(); ;
+            numericUpDownQuant.Text = pTemp.GetQuantidade().ToString();
             textBoxPreco.Text = pTemp.GetPreco().ToString();
             textBoxPathImg.Text = pTemp.GetImagem();
             //dateTimePicker1.Value.Day = pTemp.GetValidade().GetDia();

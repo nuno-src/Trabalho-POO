@@ -126,7 +126,7 @@ namespace Talho
             }
             else
             {
-                MessageBox.Show("Selecione O Produto Para Adicionar!");
+                MessageBox.Show("Selecione o Produto Para Adicionar!");
             }
         }
 
