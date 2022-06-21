@@ -135,10 +135,12 @@ namespace Talho
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 24;
             this.listBox1.Location = new System.Drawing.Point(325, 90);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(160, 316);
+            this.listBox1.Size = new System.Drawing.Size(239, 316);
             this.listBox1.TabIndex = 9;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
@@ -154,7 +156,7 @@ namespace Talho
             // 
             // buttonRemover
             // 
-            this.buttonRemover.Location = new System.Drawing.Point(505, 366);
+            this.buttonRemover.Location = new System.Drawing.Point(570, 363);
             this.buttonRemover.Name = "buttonRemover";
             this.buttonRemover.Size = new System.Drawing.Size(79, 40);
             this.buttonRemover.TabIndex = 11;
@@ -216,7 +218,7 @@ namespace Talho
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(505, 306);
+            this.buttonEditar.Location = new System.Drawing.Point(570, 303);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(79, 40);
             this.buttonEditar.TabIndex = 15;
@@ -248,6 +250,7 @@ namespace Talho
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
+            this.ShowInTaskbar = false;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuant)).EndInit();

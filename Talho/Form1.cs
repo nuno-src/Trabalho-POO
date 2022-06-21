@@ -177,6 +177,8 @@ namespace Talho
                 //listBox1.Refresh();
 
                 //listBox1.Items.Insert(listBox1.SelectedIndex, pTemp);
+
+                MessageBox.Show("Produto editado com sucesso!");
             }
         }
 
@@ -205,6 +207,9 @@ namespace Talho
             //dateTimePicker1. = pTemp.GetValidade().GetMes();
             //dateTimePicker1.Value.Year = pTemp.GetValidade().GetAno();
             textBoxDescr.Text = pTemp.GetDescricao();
+
+
+            
         }
     }
 }

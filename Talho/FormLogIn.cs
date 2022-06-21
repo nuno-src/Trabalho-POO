@@ -35,6 +35,7 @@ namespace Talho
 
                     fgestor.Enabled = true;
                     fgestor.Opacity = 100;
+                    fgestor.ShowInTaskbar = true;
                     fgestor.Activate();
                 }
                 else

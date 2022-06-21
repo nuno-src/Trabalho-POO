@@ -83,7 +83,7 @@ namespace Talho
 
         public override string ToString()
         {
-            return nome + " - " + preco + "€";
+            return nome + " - " + "Qt:" + quantidade + " - " + preco + "€";
         }
 
     }
