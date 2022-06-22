@@ -91,6 +91,7 @@ namespace Talho
             {
                 listBox1.Items.RemoveAt(listBox1.SelectedIndex);
             }
+            listBox1.SelectedItem = null;
         }
 
         private void guardarToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -195,23 +196,26 @@ namespace Talho
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            buttonEditar.Enabled = true;
+            if (listBox1.SelectedIndex >= 0)
+            {
+                buttonEditar.Enabled = true;
 
-            Produto pTemp = listBox1.SelectedItem as Produto;
+                Produto pTemp = listBox1.SelectedItem as Produto;
 
-            //Data dataTemp = new Data(dateTimePicker1.Value.Day,
-            //dateTimePicker1.Value.Month, dateTimePicker1.Value.Year);
+                //Data dataTemp = new Data(dateTimePicker1.Value.Day,
+                //dateTimePicker1.Value.Month, dateTimePicker1.Value.Year);
 
-            textBoxNome.Text = pTemp.GetNome();
-            numericUpDownQuant.Text = pTemp.GetQuantidade().ToString();
-            textBoxPreco.Text = pTemp.GetPreco().ToString();
-            textBoxPathImg.Text = pTemp.GetImagem();
-            //dateTimePicker1.Value.Day = pTemp.GetValidade().GetDia();
-            //dateTimePicker1. = pTemp.GetValidade().GetMes();
-            //dateTimePicker1.Value.Year = pTemp.GetValidade().GetAno();
-            textBoxDescr.Text = pTemp.GetDescricao();
+                textBoxNome.Text = pTemp.GetNome();
+                numericUpDownQuant.Text = pTemp.GetQuantidade().ToString();
+                textBoxPreco.Text = pTemp.GetPreco().ToString();
+                textBoxPathImg.Text = pTemp.GetImagem();
+                //dateTimePicker1.Value.Day = pTemp.GetValidade().GetDia();
+                //dateTimePicker1. = pTemp.GetValidade().GetMes();
+                //dateTimePicker1.Value.Year = pTemp.GetValidade().GetAno();
+                textBoxDescr.Text = pTemp.GetDescricao();
 
 
+            }
             
         }
 

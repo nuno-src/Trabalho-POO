@@ -147,7 +147,7 @@ namespace Talho
             this.Controls.Add(this.radioButtonCliente);
             this.Controls.Add(this.radioButtonGestor);
             this.Name = "FormLogIn";
-            this.Text = "FormLogIn";
+            this.Text = "LogIn";
             this.Load += new System.EventHandler(this.FormLogIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

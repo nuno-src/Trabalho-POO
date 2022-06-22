@@ -184,7 +184,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.labelNome);
             this.Name = "FormDetalhes";
-            this.Text = "FormDetalhes";
+            this.Text = "Detalhes";
             this.Load += new System.EventHandler(this.FormDetalhes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

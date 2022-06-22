@@ -315,7 +315,7 @@ namespace Talho
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.ShowInTaskbar = false;
-            this.Text = "Form1";
+            this.Text = "Plataforma de gestão";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuant)).EndInit();
             this.menuStrip1.ResumeLayout(false);
