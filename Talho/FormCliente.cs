@@ -16,7 +16,7 @@ namespace Talho
 
     public partial class FormCliente : Form
     {
-
+        double total = 0;
         public FormCliente()
         {
             InitializeComponent();
@@ -128,6 +128,8 @@ namespace Talho
 
                 listBox2.Items.Add(pTemp);
 
+                total = total + pTemp.GetPreco();
+                labelTOTAL.Text = total.ToString();
             }
             else
             {
@@ -139,8 +141,13 @@ namespace Talho
         {
             if (listBox2.SelectedItem != null)
             {
+                Produto pTemp = listBox2.SelectedItem as Produto;
+
                 listBox1.Items.Add(listBox2.SelectedItem);
                 listBox2.Items.Remove(listBox2.SelectedItem);
+
+                total = total - pTemp.GetPreco();
+                labelTOTAL.Text = total.ToString();
             }
             else
             {

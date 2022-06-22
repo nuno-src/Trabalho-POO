@@ -172,9 +172,9 @@ namespace Talho
             this.labelTOTAL.Font = new System.Drawing.Font("Segoe UI Emoji", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTOTAL.Location = new System.Drawing.Point(714, 61);
             this.labelTOTAL.Name = "labelTOTAL";
-            this.labelTOTAL.Size = new System.Drawing.Size(85, 15);
+            this.labelTOTAL.Size = new System.Drawing.Size(13, 15);
             this.labelTOTAL.TabIndex = 15;
-            this.labelTOTAL.Text = "label7(eliminar)";
+            this.labelTOTAL.Text = "0";
             // 
             // button3
             // 
