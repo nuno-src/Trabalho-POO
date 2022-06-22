@@ -29,6 +29,7 @@ namespace Talho
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogIn));
             this.radioButtonGestor = new System.Windows.Forms.RadioButton();
             this.radioButtonCliente = new System.Windows.Forms.RadioButton();
             this.textBoxNome = new System.Windows.Forms.TextBox();
@@ -146,6 +147,7 @@ namespace Talho
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.radioButtonCliente);
             this.Controls.Add(this.radioButtonGestor);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLogIn";
             this.Text = "LogIn";
             this.Load += new System.EventHandler(this.FormLogIn_Load);

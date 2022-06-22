@@ -29,6 +29,7 @@ namespace Talho
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -242,21 +243,21 @@ namespace Talho
             // maisCaroToolStripMenuItem
             // 
             this.maisCaroToolStripMenuItem.Name = "maisCaroToolStripMenuItem";
-            this.maisCaroToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.maisCaroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.maisCaroToolStripMenuItem.Text = "Mais caro e barato";
             this.maisCaroToolStripMenuItem.Click += new System.EventHandler(this.maisCaroToolStripMenuItem_Click);
             // 
             // maisBaratoToolStripMenuItem
             // 
             this.maisBaratoToolStripMenuItem.Name = "maisBaratoToolStripMenuItem";
-            this.maisBaratoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.maisBaratoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.maisBaratoToolStripMenuItem.Text = "Validade menor";
             this.maisBaratoToolStripMenuItem.Click += new System.EventHandler(this.maisBaratoToolStripMenuItem_Click);
             // 
             // foraDeValidadeToolStripMenuItem
             // 
             this.foraDeValidadeToolStripMenuItem.Name = "foraDeValidadeToolStripMenuItem";
-            this.foraDeValidadeToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.foraDeValidadeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.foraDeValidadeToolStripMenuItem.Text = "Fora de Validade";
             this.foraDeValidadeToolStripMenuItem.Click += new System.EventHandler(this.foraDeValidadeToolStripMenuItem_Click);
             // 
@@ -312,6 +313,7 @@ namespace Talho
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.ShowInTaskbar = false;

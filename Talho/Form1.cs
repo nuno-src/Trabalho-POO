@@ -268,11 +268,11 @@ namespace Talho
                     maxpreco = x;
                 }
             }
-            MessageBox.Show(minpreco.GetNome() + " | Qt: " + minpreco.GetQuantidade() + " | " +
-            minpreco.GetPreco() + "€", "Produto Preço MIN");
+            MessageBox.Show(minpreco.GetNome() + "\nQuantidade: " + minpreco.GetQuantidade() + "\nPreço: " +
+            minpreco.GetPreco() + "€", "Produto mais barato");
 
-            MessageBox.Show(maxpreco.GetNome() + " | Qt: " + maxpreco.GetQuantidade() + " | " +
-            minpreco.GetPreco() + "€", "Produto Preço MAX");
+            MessageBox.Show(maxpreco.GetNome() + "\nQuantidade: " + maxpreco.GetQuantidade() + "\nPreço: " +
+            maxpreco.GetPreco() + "€", "Produto mais caro");
         }
 
         private void maisBaratoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -301,27 +301,33 @@ namespace Talho
                 }
             }
 
-            MessageBox.Show(minVal.GetNome() + " | Qt: " + minVal.GetQuantidade() + " | " +
+            MessageBox.Show(minVal.GetNome() + "\nQuantidade: " + minVal.GetQuantidade() + "\nPreço: " +
             minVal.GetPreco() + "€", "Produto Validade Menor");
         }
 
         private void foraDeValidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Data dataHoje = new Data(DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year);
-
+            
+            bool foravalbol = false;
 
             Produto foraVal = listBox1.Items[0] as Produto;
             foreach (Produto x in listBox1.Items)
             {
                 if (x.GetValidade() < dataHoje)
                 {
+                    foravalbol = true;
                     foraVal = x;
-                    MessageBox.Show(foraVal.GetNome() + " | Qt: " + foraVal.GetQuantidade() + " | " +
+                    MessageBox.Show(foraVal.GetNome() + "\nQuantidade: " + foraVal.GetQuantidade() + "\nPreço: " +
                     foraVal.GetPreco() + "€", "Produto fora da validade");
                 }
-            }
                
-            
+            }
+
+            if (foravalbol == false)
+            {
+                MessageBox.Show("Não existem produtos fora da validade.");
+            }
 
         }
     }
