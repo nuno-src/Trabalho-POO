@@ -129,7 +129,7 @@ namespace Talho
                 listBox2.Items.Add(pTemp);
 
                 total = total + pTemp.GetPreco();
-                labelTOTAL.Text = total.ToString();
+                labelTOTAL.Text = total.ToString() + "€";
             }
             else
             {
@@ -147,7 +147,7 @@ namespace Talho
                 listBox2.Items.Remove(listBox2.SelectedItem);
 
                 total = total - pTemp.GetPreco();
-                labelTOTAL.Text = total.ToString();
+                labelTOTAL.Text = total.ToString() + "€";
             }
             else
             {
