@@ -33,9 +33,6 @@ namespace Talho
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.textBoxContri = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,6 +44,9 @@ namespace Talho
             this.label6 = new System.Windows.Forms.Label();
             this.labelTOTAL = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -73,60 +73,24 @@ namespace Talho
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(36, 202);
+            this.label3.Location = new System.Drawing.Point(26, 156);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(171, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "Método de Pagamento:";
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(226, 165);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(88, 25);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Dinheiro";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(226, 202);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(106, 25);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Multibanco";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(226, 240);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(86, 25);
-            this.radioButton3.TabIndex = 5;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "MB Way";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
             // textBoxNome
             // 
             this.textBoxNome.Location = new System.Drawing.Point(226, 40);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(108, 20);
+            this.textBoxNome.Size = new System.Drawing.Size(121, 20);
             this.textBoxNome.TabIndex = 6;
             // 
             // textBoxContri
             // 
             this.textBoxContri.Location = new System.Drawing.Point(226, 102);
             this.textBoxContri.Name = "textBoxContri";
-            this.textBoxContri.Size = new System.Drawing.Size(108, 20);
+            this.textBoxContri.Size = new System.Drawing.Size(121, 20);
             this.textBoxContri.TabIndex = 7;
             // 
             // label4
@@ -223,11 +187,45 @@ namespace Talho
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Dinheiro",
+            "Mb Way",
+            "Multibanco"});
+            this.comboBox1.Location = new System.Drawing.Point(226, 155);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 17;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(26, 202);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(112, 20);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "nº de telefone:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(213, 202);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(134, 20);
+            this.textBox1.TabIndex = 19;
+            // 
             // FormCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(835, 349);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.labelTOTAL);
             this.Controls.Add(this.label6);
@@ -239,9 +237,6 @@ namespace Talho
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxContri);
             this.Controls.Add(this.textBoxNome);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -260,9 +255,6 @@ namespace Talho
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.TextBox textBoxContri;
         private System.Windows.Forms.Label label4;
@@ -274,5 +266,8 @@ namespace Talho
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelTOTAL;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

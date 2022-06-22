@@ -30,6 +30,11 @@ namespace Talho
         private void FormCliente_Load(object sender, EventArgs e)
         {
             this.Icon = Properties.Resources.Icon;
+
+            //label7.Visible = false;
+            //textBox1.Visible = false;
+
+            comboBox1.SelectedIndex = 0;
             //foreach (Produto p in fPrincipal.listBox1.Items)
             //{
 
@@ -174,6 +179,29 @@ namespace Talho
             MessageBox.Show("Compra concluida.");
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+            if (comboBox1.SelectedIndex == 0)
+            {
+                label7.Visible = false;
+                textBox1.Visible = false;
+            }
+
+            if (comboBox1.SelectedIndex == 1)
+            {
+                label7.Visible = true;
+                textBox1.Visible = true;
+                label7.Text = "nº de telefone:";
+            }
+            if (comboBox1.SelectedIndex == 2)
+            {
+                label7.Visible = true;
+                textBox1.Visible = false;
+                label7.Text = "Insira o cartão.";
+            }
+            
+        }
+   
     }
 }
