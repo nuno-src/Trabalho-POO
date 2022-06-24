@@ -109,8 +109,13 @@ namespace Talho
 
         private void listBox2_DragDrop(object sender, DragEventArgs e)
         {
+            Produto pTemp = listBox1.SelectedItem as Produto;
+
             listBox2.Items.Add(listBox1.SelectedItem);
             listBox1.Items.Remove(listBox1.SelectedItem);
+
+            total = total + pTemp.GetPreco();
+            labelTOTAL.Text = total.ToString() + "€";
         }
 
         private void button1_Click(object sender, EventArgs e)
